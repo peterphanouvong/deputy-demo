@@ -48,7 +48,7 @@ export const generateCSSVariables = (): string => `
 
   .kinde-button-variant-primary .kinde-button-text{
     font-weight: 600;
-    font-size: 148px;
+    font-size: 18px;
   }
 
   [data-kinde-layout-widget] {
