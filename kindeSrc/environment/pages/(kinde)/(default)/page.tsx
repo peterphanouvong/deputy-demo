@@ -62,7 +62,12 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
         <div style={styles.sidePanel}>
           <div style={styles.logoWrapper}>
             <a href="/">
-              <img style={styles.logo} src={getLogoUrl()} alt="Company logo" />
+              <img
+                width={48}
+                style={styles.logo}
+                src={getLogoUrl()}
+                alt="Company logo"
+              />
             </a>
           </div>
         </div>
