@@ -32,4 +32,9 @@ export const generateCSSVariables = (): string => `
   [data-kinde-choice-separator] {
     text-transform: uppercase;
   }
+
+  [data-kinde-control-label] {
+    font-size: 14px;
+    font-weight: 600;
+  }
 `;
