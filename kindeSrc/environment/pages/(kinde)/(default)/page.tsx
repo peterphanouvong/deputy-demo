@@ -35,6 +35,7 @@ const styles: {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    position: "relative",
   },
   heading: {
     fontWeight: "600",
@@ -79,20 +80,44 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
             </p>
             {getKindeWidget()}
           </div>
+          <a
+            href="/"
+            style={{
+              color: "#3E27B7",
+              textDecoration: "underline",
+              fontSize: "14px",
+              position: "absolute",
+              bottom: "4rem",
+            }}
+          >
+            Join an existing workplace
+          </a>
+          <div
+            style={{
+              fontSize: "14px",
+              position: "absolute",
+              bottom: "1rem",
+              display: "flex",
+              justifyContent: "center",
+              gap: "1rem",
+            }}
+          >
+            <p>Not using Deputy?</p>
+            <a
+              href=""
+              style={{
+                fontWeight: "600",
+                color: "#3E27B7",
+                backgroundColor: "rgba(235,233,248,0.6)",
+                padding: "0.5rem 1rem",
+                borderRadius: "10px",
+              }}
+            >
+              Start your free trial
+            </a>
+          </div>
         </main>
       </div>
-      <script
-        nonce={getKindeNonce()}
-        dangerouslySetInnerHTML={{
-          __html: `
-          const helperText = document.querySelector('[data-kinde-fallback-action-helper-text]');
-          helperText.innerHTML = 'Not using Deputy?';
-
-          const registerLink = document.querySelector('[data-kinde-fallback-action] > [data-kinde-text-link]');
-          registerLink.innerHTML = 'Start your free trial';
-        `,
-        }}
-      ></script>
     </Layout>
   );
 };

@@ -54,4 +54,8 @@ export const generateCSSVariables = (): string => `
   [data-kinde-layout-widget] {
     width: 360px;
   }
+
+  [data-kinde-fallback-action] {
+    display: none;
+  }
 `;
