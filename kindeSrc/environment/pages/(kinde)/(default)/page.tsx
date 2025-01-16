@@ -1,6 +1,10 @@
 "use server";
 
-import { getKindeWidget, type KindePageEvent } from "@kinde/infrastructure";
+import {
+  getKindeNonce,
+  getKindeWidget,
+  type KindePageEvent,
+} from "@kinde/infrastructure";
 import React from "react";
 import { renderToString } from "react-dom/server.browser";
 import Layout from "../../layout";
@@ -20,7 +24,7 @@ const styles: {
     borderTopRightRadius: "5rem",
     backgroundColor: "#3E27B7",
     flex: 1,
-    maxWidth: "1024px",
+    maxWidth: "900x",
   },
   loginForm: {
     flex: "1 0 auto",
@@ -53,6 +57,15 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
           </div>
         </main>
       </div>
+      <script
+        nonce={getKindeNonce()}
+        dangerouslySetInnerHTML={{
+          __html: `
+          const helperText = document.querySelector('[data-kinde-fallback-action-helper-text]');
+          helperText.innerHTML = 'Not using Deputy?';
+        `,
+        }}
+      ></script>
     </Layout>
   );
 };
