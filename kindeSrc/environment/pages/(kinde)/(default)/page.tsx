@@ -30,6 +30,7 @@ const styles: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    maxWidth: "1024px",
   },
   heading: {
     fontWeight: "600",
