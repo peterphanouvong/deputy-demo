@@ -2,15 +2,16 @@
 const kindeVariables = {
   baseFontFamily:
     "-apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, Segoe UI, Roboto, sans-serif",
-  controlSelectTextBorderRadius: "99px",
-  buttonPrimaryBackgroundColor: "dodgerblue",
+  controlSelectTextBorderRadius: "4px",
+  buttonPrimaryBackgroundColor: "#3E27B7",
   buttonPrimaryColor: "#fff",
-  buttonBorderRadius: "99px",
-  buttonSecondaryBackgroundColor: "#fff",
+  buttonBorderRadius: "10px",
   buttonSecondaryBorderWidth: "1px",
   buttonSecondaryBorderColor: "#e9edec",
-  buttonSecondaryBorderStyle: "solid",
-  buttonSecondaryBorderRadius: "99px",
+  buttonSecondaryColor: "#3d1cba",
+  buttonSecondaryBorderStyle: "none",
+  buttonSecondaryBackgroundColor: "rgba(235,233,248,0.6)",
+  buttonSecondaryBorderRadius: "10px",
 } as const;
 
 export const generateCSSVariables = (): string => `
@@ -25,6 +26,7 @@ export const generateCSSVariables = (): string => `
     --kinde-button-secondary-border-color: ${kindeVariables.buttonSecondaryBorderColor};
     --kinde-button-secondary-border-style: ${kindeVariables.buttonSecondaryBorderStyle};
     --kinde-button-secondary-border-radius: ${kindeVariables.buttonSecondaryBorderRadius};
+    --kinde-button-secondary-color: ${kindeVariables.buttonSecondaryColor};
   }
 
   [data-kinde-choice-separator] {
