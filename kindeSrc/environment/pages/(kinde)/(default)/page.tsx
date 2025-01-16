@@ -17,10 +17,9 @@ const styles: {
     height: "100vh",
   },
   sidePanel: {
-    borderRadius: "1rem",
+    borderTopRightRadius: "4rem",
     backgroundColor: "#3E27B7",
     flex: 1,
-    margin: "0.5rem",
     maxWidth: "1024px",
   },
   loginForm: {

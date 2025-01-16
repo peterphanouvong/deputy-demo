@@ -32,6 +32,4 @@ export const generateCSSVariables = (): string => `
   [data-kinde-choice-separator] {
     text-transform: uppercase;
   }
-
-
 `;
