@@ -17,7 +17,7 @@ const styles: {
     height: "100vh",
   },
   sidePanel: {
-    borderTopRightRadius: "4rem",
+    borderTopRightRadius: "5rem",
     backgroundColor: "#3E27B7",
     flex: 1,
     maxWidth: "1024px",

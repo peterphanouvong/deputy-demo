@@ -46,7 +46,8 @@ export const generateCSSVariables = (): string => `
     height: 42px;
   }
 
-  [data-kinde-button-variant="primary"] {
+  [data-kinde-button-variant="primary"] [data-kinde-button-text] {
     font-weight: 600;
+    font-size: 148px;
   }
 `;
