@@ -23,14 +23,11 @@ const styles: {
     maxWidth: "1024px",
   },
   loginForm: {
-    minWidth: "400px",
-    margin: "0 auto",
     flex: "1 0 auto",
-    minInlineSize: "2rem",
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     justifyContent: "center",
-    maxWidth: "1024px",
   },
   heading: {
     fontWeight: "600",
