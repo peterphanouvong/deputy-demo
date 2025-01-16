@@ -3,6 +3,7 @@
 import {
   getKindeNonce,
   getKindeWidget,
+  getLogoUrl,
   type KindePageEvent,
 } from "@kinde/infrastructure";
 import React from "react";
@@ -15,6 +16,8 @@ const styles: {
   loginForm: React.CSSProperties;
   heading: React.CSSProperties;
   description: React.CSSProperties;
+  logo: React.CSSProperties;
+  logoWrapper: React.CSSProperties;
 } = {
   container: {
     display: "flex",
@@ -40,13 +43,29 @@ const styles: {
   description: {
     marginBottom: "1.5rem",
   },
+  logo: {
+    backgroundColor: "#fff",
+    borderRadius: "50%",
+    padding: "9px",
+  },
+  logoWrapper: {
+    position: "absolute",
+    top: "12px",
+    left: "12px",
+  },
 };
 
 const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
   return (
     <Layout context={context} request={request}>
       <div style={styles.container}>
-        <div style={styles.sidePanel}></div>
+        <div style={styles.sidePanel}>
+          <div style={styles.logoWrapper}>
+            <a href="/">
+              <img style={styles.logo} src={getLogoUrl()} alt="Company logo" />
+            </a>
+          </div>
+        </div>
         <main style={styles.loginForm}>
           <div style={{ padding: "2rem" }}>
             <h2 style={styles.heading}>{context.widget.content.heading}</h2>
