@@ -63,6 +63,9 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
           __html: `
           const helperText = document.querySelector('[data-kinde-fallback-action-helper-text]');
           helperText.innerHTML = 'Not using Deputy?';
+
+          const registerLink = document.querySelector('[data-kinde-fallback-action] > [data-kinde-text-link]');
+          registerLink.innerHTML = 'Start your free trial';
         `,
         }}
       ></script>
