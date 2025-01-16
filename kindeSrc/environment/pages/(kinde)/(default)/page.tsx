@@ -84,7 +84,7 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
             href="/"
             style={{
               color: "#3E27B7",
-              textDecoration: "underline",
+              textDecoration: "none",
               fontSize: "14px",
               position: "absolute",
               bottom: "4rem",
@@ -111,6 +111,8 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
                 backgroundColor: "rgba(235,233,248,0.6)",
                 padding: "0.5rem 1rem",
                 borderRadius: "10px",
+                textDecoration: "none",
+                fontSize: "14px",
               }}
             >
               Start your free trial
