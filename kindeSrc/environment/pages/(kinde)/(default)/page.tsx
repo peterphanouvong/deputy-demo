@@ -100,6 +100,7 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
               display: "flex",
               justifyContent: "center",
               gap: "1rem",
+              alignItems: "center",
             }}
           >
             <p>Not using Deputy?</p>
