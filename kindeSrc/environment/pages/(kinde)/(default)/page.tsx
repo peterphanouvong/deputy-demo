@@ -63,7 +63,7 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
           <div style={styles.logoWrapper}>
             <a href="/">
               <img
-                width={48}
+                width="48"
                 style={styles.logo}
                 src={getLogoUrl()}
                 alt="Company logo"
