@@ -125,7 +125,7 @@ const ProfilePage = async () => {
                 </h3>
                 <div className="flex items-center mt-1 space-x-2 text-sm text-gray-500">
                   <Factory className="w-4 h-4" />
-                  {/* @ts-ignore */}
+                  {/* @ts-expect-error dsad */}
                   <span className="truncate">{org?.properties.industry}</span>
                 </div>
               </div>
