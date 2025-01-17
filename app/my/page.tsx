@@ -1,45 +1,11 @@
-// import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-
-// export default async function Dashboard() {
-//   const { getClaim, getOrganization } = getKindeServerSession();
-//   const orgPropsClaim = (await getClaim(
-//     "organization_properties",
-//     "access_token"
-//   )) as any;
-
-//   const org = await getOrganization();
-
-//   const orgIndustry =
-//     orgPropsClaim?.value?.kp_org_industry?.v || "Industry not found";
-
-//   return (
-//     <div className="container">
-//       <div className="card start-hero">
-//         <p className="text-body-2 start-hero-intro">Woohoo!</p>
-//         <p className="text-display-2">
-//           Your authentication is all sorted.
-//           <br />
-//           Build the important stuff.
-//         </p>
-//       </div>
-//       <section className="next-steps-section">
-//         <p>Org name: {org?.orgName}</p>
-//         <p>Industry: {orgIndustry}</p>
-//         <h2 className="text-heading-1">Next steps for you</h2>
-//       </section>
-//     </div>
-//   );
-// }
-
-import React from "react";
-import { Building2, Factory, HelpCircle } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   getKindeServerSession,
   LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/server";
+import { Building2, Factory, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import BusinessCard from "./business-card";
-import { Card, CardContent } from "@/components/ui/card";
 
 const ProfilePage = async () => {
   const { getUser, getUserOrganizations, getOrganization } =
@@ -140,17 +106,6 @@ const ProfilePage = async () => {
             Add a new business
           </button>
         </div>
-
-        {/* Empty State Card */}
-        {/* <div className="border border-gray-200 rounded-lg p-8 text-center max-w-md">
-          <p className="text-gray-600 mb-2">
-            You aren't currently a member of any business in Deputy.{" "}
-            <button className="text-indigo-600 hover:text-indigo-700 font-bold">
-              Create a new business
-            </button>{" "}
-            or wait to be invited by your manager.
-          </p>
-        </div> */}
 
         <div className="grid grid-cols-3 gap-6 mt-8">
           {userOrgs?.orgs?.map((org) => (
