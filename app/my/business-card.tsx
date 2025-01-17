@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { KeyRound, MapPin, User } from "lucide-react";
 
-const BusinessCard = (props: { code: string; name: string }) => {
+const BusinessCard = (props: { code: string; name?: string }) => {
   return (
     <Card className="w-80 p-6 bg-white rounded-3xl">
       <CardContent className="p-0 space-y-6">
