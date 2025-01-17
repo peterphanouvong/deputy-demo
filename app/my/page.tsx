@@ -32,19 +32,22 @@
 // }
 
 import React from "react";
-import { HelpCircle } from "lucide-react";
+import { Building2, Factory, HelpCircle } from "lucide-react";
 import {
   getKindeServerSession,
   LogoutLink,
 } from "@kinde-oss/kinde-auth-nextjs/server";
 import Image from "next/image";
 import BusinessCard from "./business-card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ProfilePage = async () => {
-  const { getUser, getUserOrganizations } = getKindeServerSession();
+  const { getUser, getUserOrganizations, getOrganization } =
+    getKindeServerSession();
 
   const user = await getUser();
   const userOrgs = await getUserOrganizations();
+  const org = await getOrganization();
 
   if (!user || !userOrgs) {
     return <div>Not logged in.</div>;
@@ -105,6 +108,29 @@ const ProfilePage = async () => {
             Edit Profile
           </button>
         </div>
+
+        <Card className="w-64 bg-white">
+          <CardContent className="p-4">
+            <div className="flex items-center space-x-4">
+              <div className="relative">
+                <Building2 className="w-8 h-8 text-indigo-600" />
+                <div className="absolute -top-1 -right-1">
+                  <div className="w-3 h-3 bg-green-500 rounded-full ring-2 ring-white" />
+                </div>
+              </div>
+
+              <div className="flex-1 min-w-0">
+                <h3 className="text-sm font-medium text-gray-900 truncate">
+                  {org?.orgName}
+                </h3>
+                <div className="flex items-center mt-1 space-x-2 text-sm text-gray-500">
+                  <Factory className="w-4 h-4" />
+                  <span className="truncate">{org?.properties.industry}</span>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Businesses Section */}
         <div className="flex items-center justify-between mb-6 mt-4">
