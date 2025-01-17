@@ -1,6 +1,7 @@
 import React from "react";
 import { X } from "lucide-react";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { Button } from "@/components/ui/button";
 
 const LandingPage = () => {
   return (
@@ -78,6 +79,14 @@ const LandingPage = () => {
       </div>
 
       <StatsSection />
+
+      <div className="mt-20">
+        <div className="flex gap-4">
+          <Button asChild>
+            <LoginLink orgCode="org_9f04a44d036">Bondi Vet</LoginLink>
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };

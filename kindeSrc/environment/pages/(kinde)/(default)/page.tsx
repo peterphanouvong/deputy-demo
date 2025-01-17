@@ -72,6 +72,17 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
             </a>
           </div>
         </div>
+
+        <div>
+          {
+            <img
+              width="48"
+              style={styles.logo}
+              src={getLogoUrl(request.authUrlParams.orgCode)}
+              alt="Organization logo"
+            />
+          }
+        </div>
         <main style={styles.loginForm}>
           <div style={{ padding: "2rem" }}>
             <h2 style={styles.heading}>{context.widget.content.heading}</h2>
