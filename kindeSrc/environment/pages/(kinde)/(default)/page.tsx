@@ -87,7 +87,7 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
               textDecoration: "none",
               fontSize: "14px",
               position: "absolute",
-              bottom: "4rem",
+              bottom: "4.5rem",
             }}
           >
             Join an existing workplace
