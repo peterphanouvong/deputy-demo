@@ -46,6 +46,10 @@ const ProfilePage = async () => {
   const user = await getUser();
   const userOrgs = await getUserOrganizations();
 
+  if (!user || !userOrgs) {
+    return <div>Not logged in.</div>;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -60,7 +64,7 @@ const ProfilePage = async () => {
               <LogoutLink>
                 <div className="w-8 h-8 rounded-full flex items-center justify-center text-white overflow-hidden">
                   <Image
-                    src={user.picture}
+                    src={user?.picture || ""}
                     alt="Profile Picture"
                     width={50}
                     height={50}
@@ -68,7 +72,7 @@ const ProfilePage = async () => {
                 </div>
               </LogoutLink>
               <span className="text-sm text-gray-700">
-                Hello, {user.given_name} {user.family_name}
+                Hello, {user?.given_name} {user?.family_name}
               </span>
             </div>
           </div>
@@ -82,7 +86,7 @@ const ProfilePage = async () => {
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl overflow-hidden">
               <Image
-                src={user.picture}
+                src={user?.picture || ""}
                 alt="Profile Picture"
                 width={100}
                 height={100}
@@ -90,10 +94,10 @@ const ProfilePage = async () => {
             </div>
             <div className="flex-1">
               <h1 className="text-2xl font-semibold text-gray-900">
-                {user.given_name} {user.family_name}
+                {user?.given_name} {user?.family_name}
               </h1>
               <div className="flex items-center gap-4">
-                <span className="text-gray-500">{user.email}</span>
+                <span className="text-gray-500">{user?.email}</span>
               </div>
             </div>
           </div>
@@ -122,7 +126,7 @@ const ProfilePage = async () => {
         </div> */}
 
         <div className="grid grid-cols-3 gap-6 mt-8">
-          {userOrgs.orgs.map((org) => (
+          {userOrgs?.orgs?.map((org) => (
             <BusinessCard key={org.code} code={org.code} name={org.name} />
           ))}
         </div>
