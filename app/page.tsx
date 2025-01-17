@@ -69,7 +69,7 @@ const LandingPage = () => {
           <div className="md:w-1/2">
             <div className="rounded-3xl overflow-hidden">
               <img
-                src="/api/placeholder/800/600"
+                src="/image.jpg"
                 alt="Deputy employee management"
                 className="w-full"
               />
@@ -80,7 +80,7 @@ const LandingPage = () => {
 
       <StatsSection />
 
-      <div className="mt-20">
+      <div className="mt-20 pb-20">
         <div className="flex gap-4 mx-auto max-w-7xl">
           <Button asChild>
             <LoginLink orgCode="org_9f04a44d036">Bondi Vet</LoginLink>
