@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { KeyRound, MapPin, User } from "lucide-react";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs";
 
 const BusinessCard = (props: { code: string; name?: string }) => {
   return (
@@ -41,8 +42,8 @@ const BusinessCard = (props: { code: string; name?: string }) => {
           <Button variant={"ghost"} className="w-full">
             Settings
           </Button>
-          <Button variant="secondary" className="w-full">
-            Open
+          <Button asChild variant="secondary" className="w-full">
+            <LoginLink orgCode={props.code}>Open</LoginLink>
           </Button>
         </div>
       </CardContent>

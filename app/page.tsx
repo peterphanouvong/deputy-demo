@@ -81,9 +81,15 @@ const LandingPage = () => {
       <StatsSection />
 
       <div className="mt-20">
-        <div className="flex gap-4">
+        <div className="flex gap-4 mx-auto max-w-7xl">
           <Button asChild>
             <LoginLink orgCode="org_9f04a44d036">Bondi Vet</LoginLink>
+          </Button>
+          <Button asChild>
+            <LoginLink orgCode="org_307d9325a09">F45</LoginLink>
+          </Button>
+          <Button asChild>
+            <LoginLink orgCode="org_64996637a81">Messina</LoginLink>
           </Button>
         </div>
       </div>
