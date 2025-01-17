@@ -77,7 +77,7 @@ const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
           <div>
             {request.authUrlParams.orgCode && (
               <img
-                width="48"
+                width="72"
                 style={styles.logo}
                 src={getLogoUrl(request.authUrlParams.orgCode)}
                 alt="Organization logo"
