@@ -6,6 +6,7 @@ import {
 import { Building2, Factory, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import BusinessCard from "./business-card";
+import { Button } from "@/components/ui/button";
 
 const ProfilePage = async () => {
   const { getUser, getUserOrganizations, getOrganization } =
@@ -43,6 +44,9 @@ const ProfilePage = async () => {
               <span className="text-sm text-gray-700">
                 Hello, {user?.given_name} {user?.family_name}
               </span>
+              <Button variant="ghost" asChild>
+                <LogoutLink>Log out</LogoutLink>
+              </Button>
             </div>
           </div>
         </div>
