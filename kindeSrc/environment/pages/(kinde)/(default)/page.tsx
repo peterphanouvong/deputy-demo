@@ -27,7 +27,6 @@ const styles: {
     borderTopRightRadius: "5rem",
     backgroundColor: "#3E27B7",
     flex: 1,
-    maxWidth: "50%",
   },
   loginForm: {
     flex: "1 0 auto",
@@ -36,6 +35,7 @@ const styles: {
     alignItems: "center",
     justifyContent: "center",
     position: "relative",
+    maxWidth: "50%",
   },
   heading: {
     fontWeight: "600",
