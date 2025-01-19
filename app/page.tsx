@@ -1,6 +1,9 @@
 import React from "react";
 import { X } from "lucide-react";
-import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import {
+  LoginLink,
+  RegisterLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
 import { Button } from "@/components/ui/button";
 
 const LandingPage = () => {
@@ -38,9 +41,9 @@ const LandingPage = () => {
           <button className="text-indigo-800 bg-indigo-50 px-4 py-2 rounded-lg font-semibold">
             Book a demo
           </button>
-          <button className="bg-indigo-800 text-white px-4 py-2 rounded-lg font-semibold">
+          <RegisterLink className="bg-indigo-800 text-white px-4 py-2 rounded-lg font-semibold">
             Start my free trial
-          </button>
+          </RegisterLink>
         </div>
       </nav>
 
