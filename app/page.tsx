@@ -41,7 +41,12 @@ const LandingPage = () => {
           <button className="text-indigo-800 bg-indigo-50 px-4 py-2 rounded-lg font-semibold">
             Book a demo
           </button>
-          <RegisterLink className="bg-indigo-800 text-white px-4 py-2 rounded-lg font-semibold">
+          <RegisterLink
+            authUrlParams={{
+              is_create_org: "true",
+            }}
+            className="bg-indigo-800 text-white px-4 py-2 rounded-lg font-semibold"
+          >
             Start my free trial
           </RegisterLink>
         </div>
